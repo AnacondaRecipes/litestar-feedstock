@@ -7,17 +7,12 @@ package:
 source:
   url: https://pypi.io/packages/source/l/litestar/litestar-{{ version }}.tar.gz
   sha256: d2cc43157060a06dac8a77e9dc6ba2936238beada61e272e8842c21fca23fcee
-  patches:
-    - 0001-pytest_lazy_fixture_fix.patch
 
 build:
   number: 0
   skip: true  # [py<39]
 
 requirements:
-  build:
-    - m2-patch             # [win]
-    - patch                # [not win]
   host:
     - python
   run:
