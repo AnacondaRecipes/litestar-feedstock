@@ -11,6 +11,8 @@ source:
 build:
   number: 0
   skip: true  # [py<39]
+  # because of missing httpx for s390x
+  skip: true  # [s390x]
 
 requirements:
   host:
