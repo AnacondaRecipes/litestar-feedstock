@@ -503,11 +503,16 @@ outputs:
 
 about:
   home: https://litestar.dev
+  summary: Light-weight and flexible ASGI API Framework
+  description: |
+    Litestar is a powerful, flexible, highly performant, and opinionated ASGI framework.
+    The Litestar framework supports Plugins, ships with dependency injection, security primitives, OpenAPI schema
+    generation, MessagePack, middlewares, a great CLI experience, and much more.
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
   dev_url: https://github.com/litestar-org/litestar
   doc_url: https://docs.litestar.dev
-  summary: Light-weight and flexible ASGI API Framework
-  license: MIT
-  license_file: LICENSE
 
 extra:
   feedstock-name: litestar
