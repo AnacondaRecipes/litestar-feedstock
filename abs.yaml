@@ -1,2 +1,4 @@
 upload_channels:
-  - sfe1ed40
+  - evidently-bootstrap
+source_channels:
+  - evidently-bootstrap
