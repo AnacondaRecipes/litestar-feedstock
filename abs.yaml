@@ -1,4 +1,4 @@
-upload_channels:
-  - evidently-bootstrap
-source_channels:
-  - evidently-bootstrap
+staging_channel_upload_target: evidently-bootstrap
+
+channels:
+  - https://staging.continuum.io/pbp/evidently-bootstrap
