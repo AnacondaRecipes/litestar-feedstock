@@ -120,8 +120,6 @@ outputs:
       license_file: LICENSE
 
   - name: litestar-with-brotli
-    build:
-      noarch: generic
     requirements:
       build:
         - python
