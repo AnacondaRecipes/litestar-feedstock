@@ -37,9 +37,7 @@ outputs:
         - python
         - anyio >=3
         - httpx >=0.22
-        - exceptiongroup                # [py<311]
-        - importlib-metadata            # [py<310]
-        - importlib-resources >=5.12.0  # [py<39]
+        - exceptiongroup >=1.2.2        # [py<311]
         - litestar-htmx >=0.4.0
         - msgspec >=0.18.2
         - multidict >=6.0.2
@@ -56,6 +54,7 @@ outputs:
         - litestar
       commands:
         - pip check
+        - litestar --help
       requires:
         - pip
     about:
