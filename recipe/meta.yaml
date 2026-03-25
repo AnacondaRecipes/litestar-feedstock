@@ -1,16 +1,17 @@
+{% set name = "litestar" %}
 {% set version = "2.21.1" %}
 
 package:
-  name: litestar-split
+  name: {{ name }}-split
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/l/litestar/litestar-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 28301438de7c5e77bb68a5d8684dff415b9f252b0dd8413b356e8e6794c6863a
 
 build:
   number: 0
-  skip: true  # [py<39]
+  skip: true  # [py<38]
   # because of missing httpx for s390x
   skip: true  # [s390x]
 
@@ -23,7 +24,7 @@ requirements:
 outputs:
   - name: litestar
     build:
-      skip: true  # [py<39]
+      skip: true  # [py<38]
       script:
         - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
       entry_points:
@@ -38,6 +39,8 @@ outputs:
         - anyio >=3
         - httpx >=0.22
         - exceptiongroup >=1.2.2        # [py<311]
+        - importlib-metadata            # [py<310]
+        - importlib-resources >=5.12.0  # [py<39]
         - litestar-htmx >=0.4.0
         - msgspec >=0.18.2
         - multidict >=6.0.2
