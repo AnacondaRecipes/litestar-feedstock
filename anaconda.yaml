@@ -4,7 +4,6 @@ upstream_sources:
       identifier: litestar
     packages:
       - litestar
-      - litestar-split
       - litestar-with-annotated-types
       - litestar-with-attrs
       - litestar-with-brotli
