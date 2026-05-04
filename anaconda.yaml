@@ -1,0 +1,16 @@
+anaconda_config_version: 1
+upstream_sources:
+  - pypi:
+      identifier: litestar
+    packages:
+      - litestar
+      - litestar-split
+      - litestar-with-annotated-types
+      - litestar-with-attrs
+      - litestar-with-brotli
+      - litestar-with-cryptography
+      - litestar-with-full
+      - litestar-with-jinja
+      - litestar-with-jwt
+      - litestar-with-prometheus
+      - litestar-with-structlog
