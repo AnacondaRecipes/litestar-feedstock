@@ -140,8 +140,6 @@ outputs:
         - python
         - {{ pin_subpackage("litestar", exact=True) }}
         - brotli
-      host:
-        - brotli {{ brotli }}
     test:
       imports:
         - litestar
