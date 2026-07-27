@@ -1,5 +1,5 @@
 {% set name = "litestar" %}
-{% set version = "2.21.1" %}
+{% set version = "2.24.0" %}
 
 package:
   name: {{ name }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 28301438de7c5e77bb68a5d8684dff415b9f252b0dd8413b356e8e6794c6863a
+  sha256: 8f4b137cb115554b9fbc12bd01d398d5bb40ba85f2d333dd73f4b747308bbb46
 
 build:
   number: 0
@@ -140,6 +140,8 @@ outputs:
         - python
         - {{ pin_subpackage("litestar", exact=True) }}
         - brotli
+      host:
+        - brotli {{ brotli }}
     test:
       imports:
         - litestar
