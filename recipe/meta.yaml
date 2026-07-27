@@ -11,7 +11,8 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<38]
+  # https://github.com/AnacondaRecipes/polyfactory-feedstock/pull/3#issuecomment-4118533129
+  skip: true  # [py<38 or py>314]
   # because of missing httpx for s390x
   skip: true  # [s390x]
 
